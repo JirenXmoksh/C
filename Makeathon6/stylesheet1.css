@@ -1,0 +1,306 @@
+@font-face {
+font-family: markpro; 
+src: url('MarkPro.TTF');
+}
+@font-face {
+font-family: Madina; 
+src: url('Madina.TTF');
+}
+html,body{
+	overflow-x: hidden;
+}
+#buttontext {
+	font-family: markpro;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: #1e1b18;
+	position: relative;
+	top: -125px ;
+	left: 55px  ;
+	border: 2px solid #77f;
+	border-radius: 20px;
+	padding: 8px;
+	background: linear-gradient(to right, #77f 2%, white 60%);
+	-webkit-background-clip: text;
+	background-clip: none;
+	-webkit-text-fill-color: transparent;
+	transition: .3s;
+}
+#buttontext:hover {
+	transform: scale(0.995);
+	background-color: #77f;
+	color: #1e1b18;
+	background: linear-gradient(to right, #77f 20%, white 60%);
+	-webkit-background-clip: #1e1b18;
+	background-clip: none;
+	-webkit-text-fill-color: #1e1b18;
+}
+#textgrad {
+	background: linear-gradient(to right, white 2%, #77f 60%);
+	-webkit-background-clip: text;
+	background-clip: none;
+	-webkit-text-fill-color: transparent;
+}
+#firstDiv {
+	z-index: 1;
+	background-color: #1e1b18;
+	color:  #ede9ec;
+	height: 190px;
+	align-items: center;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	font-family:markpro;
+	
+}
+#firstDivHead {
+	background: linear-gradient(to right,#1e1b18 10%, #77f 85%);
+	color: white;
+	padding-top: 70px;
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+	height: 200px;
+	font-size: 75px;
+	position: relative;
+	left: 20px;
+}
+#secondDiv {
+	color: #143642;
+	font-size: 25px;
+	text-align: center;
+}
+#dropdown1 {
+	color: grey;
+	font-weight: bold;
+	border: 1px solid #aac;
+	border-radius: 10px;
+	width: 110px;
+	background: linear-gradient(to right, grey 2%, #77c 60%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.border {
+	border:1px solid white;
+}
+#dropdown2 {
+	color: grey;
+	font-weight: bold;
+	border: 1px solid #aac;
+	border-radius: 10px;
+	width: 110px;
+	background: linear-gradient(to right, grey 2%, #77c 60%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+body {
+	font-family: markpro;
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 30px;
+	background-color: #1e1b18;
+}
+#field1 {
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 600px;
+	height: auto;
+}
+#field2 {
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	width: 600px;
+	height: auto;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#field3 {
+	color: #A8201A;
+	font-weight:bold;
+	background-color: #ede9ec;
+	border: 1px solid #143642;
+	width: 600px;
+	height: auto;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#field4 {
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 600px;
+	height: auto;
+}
+#field5 {
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 600px;
+	height: auto;
+}
+#field6 {
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 600px;
+	height: auto;
+}
+#field7 {
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 600px;
+	height: auto;
+}
+#field8 {
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 600px;
+	height: auto;
+}
+#field9 {
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 600px;
+	height: auto;
+}
+#field10{
+	color: #A8201A;
+	font-weight: bold;
+	background-color:#1e1b18;
+	background: linear-gradient(to right, grey 20%, white 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 600px;
+	height: auto;
+}
+
+#Fset1 {
+	border: 1px solid #77f;
+	background-color: #1e1b18;
+	border-radius: 10px;
+	color: #aaf;
+}
+#leg1{
+	color:white;
+	font-size: 20px;
+	letter-spacing: 0.4em;
+	background: linear-gradient(to right,#1e1b18 60%, #77f );
+	border: 1px solid #55f;
+	border-radius: 60px;	
+}
+#Fset2 {
+	border: 1px solid #77f;
+	background-color: #1e1b18;
+	border-radius: 10px;
+	color: #aaf;
+}
+#leg2{
+	color:white;
+	font-size: 20px;
+	letter-spacing: 0.4em;
+	background: linear-gradient(to right,#1e1b18 60%, #77f );
+	border: 1px solid #55f;
+	border-radius: 60px;
+}
+#desc1 {
+	color: white;
+	font-weight: bold;
+	font-size: 17px;
+	background-color:#1e1b18;
+	border: 2px solid #55f;
+	border-radius: 10px;
+}
+
+#p2 {
+	font-size:18px;
+}
+#p3 {
+	font-size:18px;
+}
+#sub {
+	font-family: markpro;
+	font-size: 13px;
+	font-weight: bold;
+	background-color: #1e1b18;
+	border: 2px solid #77f;
+	border-radius: 20px;
+	padding: 8px;
+	background: linear-gradient(to right, #77f 2%, white 60%);
+	-webkit-background-clip: text;
+	background-clip: none;
+	-webkit-text-fill-color: transparent;
+	transition: .3s;
+}
+#sub:hover {
+	transform: scale(0.995);
+	background-color: #77f;
+	color: #1e1b18;
+	background: linear-gradient(to right, #77f 20%, white 60%);
+	-webkit-background-clip: #1e1b18;
+	background-clip: none;
+	-webkit-text-fill-color: #1e1b18;
+}
+#res {
+	font-family: markpro;
+	font-size: 13px;
+	font-weight: bold;
+	background-color: #1e1b18;
+	border: 2px solid #77f;
+	border-radius: 20px;
+	padding: 8px;
+	background: linear-gradient(to right, #77f 2%, white 60%);
+	-webkit-background-clip: text;
+	background-clip: none;
+	-webkit-text-fill-color: transparent;
+	transition: 0.3s;
+}
+#res:hover {
+	transform: scale(0.996);
+	background-color: #77f;
+	color: #1e1b18;
+	background: linear-gradient(to right, #77f 20%, white 60%);
+	-webkit-background-clip: #1e1b18;
+	background-clip: none;
+	-webkit-text-fill-color: #1e1b18;
+}
+::placeholder {
+	color: grey;
+	font-family: markpro;
+}
+
+
+
+
+	
+
+	

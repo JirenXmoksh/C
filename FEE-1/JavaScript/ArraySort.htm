@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array sorting in JS
+        </title>
+    </head>
+    <body>
+        <p>The sort() method sorts the array: </p>
+        <p>The reverse() method reverses the array: </p>
+        <button onclick="sort()">Sort the array</button>
+        <button onclick="reverseArr()">Reverse the array</button>
+        <p id="a"></p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango", 1, -98.8];
+            document.getElementById("a").innerHTML = fruits.join(" | ");
+            function sort() {
+                fruits.sort();
+                document.getElementById("a").innerHTML = fruits.join(" | ");
+            }
+            function reverseArr() {
+                fruits.reverse();
+                document.getElementById("a").innerHTML = fruits.join(" | ");
+            }
+        </script>
+    </body>
+</html>

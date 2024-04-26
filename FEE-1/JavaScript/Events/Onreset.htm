@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            Onreset event in  JS
+        </title>
+    </head>
+    <body>
+        <p>When we reset the form, a function is triggered which alerts some text.</p>
+        <form onreset="resetFunc()">
+            Enter name: <input type="text">
+            <input type="reset">
+        </form>
+        <script>
+            function resetFunc() {
+                alert("The form was reset");
+            }
+        </script>
+    </body>
+</html>

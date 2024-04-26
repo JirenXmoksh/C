@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, intitial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<title>BreakPoints in Media Queries</title>
+<style>
+.custom-class {
+	display: none;
+}
+@media (min-width: 576px){
+	.custom-class {display: block; }
+}
+</style>
+</head>
+<body>
+<div class="text-center">
+
+<h1 class="text-success">Breakpoints</h1>
+<h2 class="scrollable">Bootstrap BreakPoints Media Queries</h2>
+
+<br>
+<div class="custom-class">
+<h5>This block is not visible for sm breakpoint but visible for other breakpoints</h5>
+</div>
+</div>
+</body>
+</html>
+

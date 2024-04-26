@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array popping in JS
+        </title>
+    </head>
+    <body>
+        <p>The pop() method removes the last element from an array: </p>
+        <button onclick="popfunction()">Try some popping</button>
+        <p id="a"></p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"]
+            document.getElementById("a").innerHTML = fruits.join(" | ");
+            function popfunction() {
+                fruits.pop();
+                document.getElementById("a").innerHTML = fruits.join(" | ");
+            }
+        </script>
+    </body>
+</html>

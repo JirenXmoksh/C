@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array shifting and unshifting in JS
+        </title>
+    </head>
+    <body>
+        <p>The shift() method removes the first array element and "shifts" all other elements to a lower index: </p>
+        <button onclick="shiftfunction()">Try shifting some elements</button>
+        <button onclick = "unshiftfunction()">Try unshifting some</button>
+        <p id="a"></p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"]
+            document.getElementById("a").innerHTML = fruits.join(" | ");
+
+            function shiftfunction() {
+                fruits.shift();
+                document.getElementById("a").innerHTML = fruits.join(" | ");
+            }
+
+            function unshiftfunction(){
+                fruits.unshift("Unshifted element")
+                document.getElementById("a").innerHTML = fruits.join(" | ")
+            }
+        </script>
+    </body>
+</html>

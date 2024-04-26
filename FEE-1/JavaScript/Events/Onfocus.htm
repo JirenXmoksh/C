@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>
+            Onfocus event in JS
+        </title>
+    </head>
+    <body>
+        Enter your name: <input style="background-color: #f00" type="text" onfocus="focusFunc(this)">
+        <p>When the input field gets a focus, a function is triggered which changes the background color.</p>
+        <script>
+            function focusFunc(x) {
+                x.style.background = "#E0E0E0";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mental Health and Education</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="stylesheet1.css" media="all">
+<link rel="icon" type="image/x-icon" href="mainfavicon.jpg">
+<title>Survey</title>
+</head>
+<script>
+    function validateemail(){
+        var x = document.myform.field4.value;
+        var atposition = x.indexOf("@");
+        var dotposition = x.lastIndexOf(".");
+        if(atposition<1 || dotposition<atposition+2){
+            alert("Enter a valid e-mail address please");
+            return false;
+        }
+    }
+    function validateDOB() {
+      var dob = document.getElementById("field3").value;
+      var dateRegex = /^\d{2}\/\d{2}\/\d{4}$/; // Regular expression for DD/MM/YYYY format
+      
+      if (!dateRegex.test(dob)) {
+        alert("Please enter Date of Birth in the format DD/MM/YYYY");
+        return false;
+      }
+
+      var parts = dob.split('/');
+      var day = parseInt(parts[0], 10);
+      var month = parseInt(parts[1], 10);
+      var year = parseInt(parts[2], 10);
+
+      if (year < 1900 || year > new Date().getFullYear()) {
+        alert("Please enter a valid year between 1900 and the current year");
+        return false;
+      }
+
+      var maxDay = new Date(year, month, 0).getDate();
+      if (day <= 0 || day > maxDay) {
+        alert("Please enter a valid day for the selected month and year");
+        return false;
+      }
+
+      return true;
+    }
+</script>
+<body>
+<div class="container-fluid cover">
+<div class="col-sm-12 col-md-12 col-lg-12"><div id="firstDiv"><h1 style="text-align:center" id="firstDivHead">Mental Health and Education</h1>
+<div class="btn"><a href="SurveyFormIntroPage.htm" style="text-decoration:none"><p id="buttontext">Home</p></a></div>
+</div></div>
+</div>	
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form onreset="resetFunc()" onsubmit="return (validateemail() & validateDOB())" onsubmit="subFunc()" name="myform">
+<br>
+<div class="container">
+<fieldset id="Fset1" class="px-4 pb-3 pt-3">
+<legend id="leg1" class="mt-3 mb-5 mx-2 w-25 text-center p-2">About You</legend>
+
+<table border="0" cellspacing="10px" cellpadding="8pt">
+<tr>
+
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field1">First name: </label>
+</td>
+
+<td>
+<input placeholder="Your first name" class="border border-top-0 p-2 mb-3" type="text" id="field1" name="field1" onkeyup="keyupFunc(this)" required>
+</div>
+</div>
+</td>
+
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field2">Last name: </label>
+</td>
+<td>
+<input placeholder="Your last name" class="border border-end-0 border-bottom-0 p-2 mb-3"  type="text" id="field2" name="field2" onkeyup="keyupFunc(this)" required>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field3">DOB: </label>
+</td>
+<td>
+<input placeholder="DD/MM/YYYY" class="border border-start-0 border-top-0 p-2 mb-3"  type="text" id="field3" name="field3" required>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field4">Email ID: </label>
+</td>
+<td>
+<input placeholder="example123@gmail.com" class="border border-end-0 border-bottom-0 p-2 mb-3" type="text" id="field4" name="field4" required>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field5">Institute Name: </label>
+</td>
+<td>
+<input placeholder="abc scl/uni/clg, place" class="border  border-start-0 border-top-0 p-2 mb-3" type="text" id="field5" name="field5" onkeyup="keyupFunc(this)" required>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field6">Course/Stream: </label>
+</td>
+<td>
+<input placeholder="B.Tech/BCA/Non-med/Med etc" class="border border-bottom-0 p-2 mb-3"  type="text" id="field6" name="field6" onkeyup="keyupFunc(this)" required>
+</div>
+</div>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="dropdown1"><p style="display:inline">Year of Study (if college):</p> </label>
+</td>
+<td>
+<select id="dropdown1" class="p-2 rounded-pill mb-3 mt-2" >
+
+<span id="textgrad2"><option name="op1" value="op1">1st</option></span>
+<option name="op2" value="op2" >2nd</option>
+<option name="op3" value="op3" >3rd</option>
+<option name="op4" value="op4" >4th</option>
+<option name="op4" value="op4" >None</option>
+
+</select>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="dropdown2"><p style="display:inline">Standard (if school):</p> </label>
+</td>
+<td>
+<select id="dropdown2" class="p-2 rounded-pill mb-3 mt-2" >
+<option name="op1" value="op1">9th</option>
+<option name="op2" value="op2">10th</option>
+<option name="op3" value="op3">11th</option>
+<option name="op4" value="op4">12th</option>
+<option name="op5" value="op5">8th or lower</option>
+<option name="op5" value="op5">None</option>
+</select>
+</div>
+</div>
+</td>
+</tr>
+</table>
+
+
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-8 mt-3">
+<p id="p2" style="display:inline">&nbsp Gender: </p>
+<label for="op1"></label>&nbsp &nbsp &nbsp &nbsp 
+<input class="form-check-input" type="radio" name="Option" value="op2" id="op1" required><span id="textgrad2">&nbsp Male</span>
+&nbsp
+&nbsp
+<label for="op2"></label>&nbsp &nbsp &nbsp &nbsp 
+<input class="form-check-input" type="radio" name="Option" value="op1" id="op2" required><span id="textgrad2">&nbsp Female</span>
+&nbsp
+&nbsp
+<label for="op3"></label>&nbsp &nbsp &nbsp &nbsp 
+<input class="form-check-input" type="radio" name="Option" value="op3" id="op3" required><span id="textgrad2">&nbsp Other</span>
+</div>
+</div>
+<br>
+<br>
+</fieldset>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container">
+<fieldset id="Fset2"  class="px-4 pb-3 pt-3">
+<legend id="leg2"  class="mt-3 mb-5 mx-2 w-25 text-center p-2">Our questions</legend>
+<br>
+<center>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<p id="p2" style="display:inline"> How are you feeling right now on a scale of 1-5?&nbsp: &nbsp </p>
+<label for="op1"></label>
+<input class="form-check-input" type="radio" name="Option1" value="op2" id="op1" required>&nbsp 1
+&nbsp
+&nbsp
+<label for="op2"></label>
+<input class="form-check-input" type="radio" name="Option1" value="op1" id="op2" required>&nbsp 2
+&nbsp
+&nbsp
+<label for="op3"></label>
+<input class="form-check-input" type="radio" name="Option1" value="op3" id="op3" required>&nbsp 3
+&nbsp
+&nbsp
+<label for="op4"></label>
+<input class="form-check-input" type="radio" name="Option1" value="op4" id="op4" required>&nbsp 4
+&nbsp
+&nbsp
+<label for="op5"></label>
+<input class="form-check-input" type="radio" name="Option1" value="op5" id="op5" required>&nbsp 5
+</div>
+</div>
+</center>
+
+
+<table border="0" cellpadding="15px">
+
+<div class="row">
+
+<tr>
+    <div class="col-sm-12 col-md-12 col-lg-12 mb-4 mt-0 mx-2"></div>
+    <td>
+        <p id="p3" style="display:inline">&nbsp I. How much time do you spend on your homework?  </p></label>
+    </td>
+    <td>
+        <label for="op1"></label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+        <input class="form-check-input" type="radio" name="Option2" value="op1" required>&nbsp < 2 hours
+        <label for="op1"></label>&nbsp &nbsp 
+        <input class="form-check-input" type="radio" name="Option2" value="op2" required>&nbsp 2-3 hours
+        <label for="op1"></label>&nbsp &nbsp 
+        <input class="form-check-input" type="radio" name="Option2" value="op3" required>&nbsp 3-4 hours
+        <label for="op1"></label>&nbsp &nbsp 
+        
+        <input class="form-check-input" type="radio" name="Option2" value="op4" required>&nbsp 4-5 hours
+        <label for="op1"></label>&nbsp &nbsp 
+        <input class="form-check-input" type="radio" name="Option2" value="op5" required>&nbsp > 5 hours
+        
+    </td>
+</div>
+</tr>
+
+
+</div>
+
+
+
+<tr>
+
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12  mx-1">
+<label for="field8">II. How would you describe your classmates and overall learning experience in a few words?</label>
+</td>
+
+<td>
+<input placeholder="your answer" class="border border-top-0 p-2 mb-3 mx-5" type="text" id="field8" name="field8" required>
+</td>
+</tr>
+</div>
+</div>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12  mx-1">
+<label for="field9">III. Why did you opt for this course and how do you feel about the education you are getting?</label>
+</td>
+<td>
+<input placeholder="your answer" class="border border-start-0  border-end-0 p-2 mb-3 mx-5"  type="text" id="field9" name="field9" required>
+</td>
+</tr>
+</div>
+</div>
+
+<tr>
+<td>
+<label for="field10">IV. If you were to change something in the course/class you are studying, what would it be?</label>
+</td>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12 mx-1">
+<input placeholder="your answer" class="border border-bottom-0 p-2 mb-3 mx-5"  type="text" id="field10" name="field10" required>
+</div>
+</div>
+</td>
+</tr>
+
+&nbsp
+<tr>
+    <td>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 mb-4 mx-1">
+            <p id="p4" style="display:inline">V. Would you recommend this course to anyone else?&nbsp</p></label>
+    </td>
+    <td>
+        <label for="op1">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <input class="form-check-input" type="radio" name="Option3" value="op1" id="op1" required>&nbsp Yes 
+            <label for="op2">&nbsp &nbsp &nbsp &nbsp
+            <input class="form-check-input" type="radio" name="Option3" value="op2" id="op2" required>&nbsp No
+            </div>
+            </div>
+    </td>
+</tr>
+</table>
+
+</fieldset>
+</div>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<center>
+<label for="desc1"><caption><span id="textgrad">Feel free to share your thoughts</span></caption></label><br>
+<textarea id="desc1" rows="14" cols="130" style="resize:none">
+</textarea>
+</center>
+<br>
+<br>
+
+<center>
+
+<label for="sub"></label>
+<input class="mt-5" type="submit" name="submit" value="SUBMIT" id="sub"></div>
+<label for="res"></label>
+<input class="btn" class="my-5" type="reset"  name="clearform" value="CLEAR" id="res"></div>
+
+<div style="color:#99f; padding-top:10px;">The response will be submitted without any message once you fill 
+all the fields correctly and click on submit or press Enter when on the last field!</div>
+
+</center>
+</form>
+<script>
+    function resetFunc() {
+        alert("All the inputs have been cleared!");
+    }
+    function subFunc() {
+        alert("The form has been submitted. Thank You!");
+    }
+    function keyupFunc() {
+        var x = document.getElementById("field1");
+        x.value = x.value.toUpperCase(); 
+
+        var x = document.getElementById("field2");
+        x.value = x.value.toUpperCase();
+        
+        var x = document.getElementById("field5");
+        x.value = x.value.toUpperCase(); 
+
+        var x = document.getElementById("field6");
+        x.value = x.value.toUpperCase(); 
+    }
+</script>
+</body>
+</html>

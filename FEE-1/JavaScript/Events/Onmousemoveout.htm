@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Onmousemove and onmouseout events in JS</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div onmousemove="mousemov(event)" onmouseout="clearCoor()"></div>
+        <p>Mouse over the rectangle above, and get the coordinates of  your mouse pointer.</p>
+        <p id="a"></p>
+        <script>
+            function mousemov(e) {
+                var x = e.clientX;
+                var y = e.clientY;
+                var coor = "Coordinates: ("+x+","+y+")";
+                document.getElementById("a").innerHTML = coor;
+            }
+            function clearCoor() {
+                document.getElementById("a").innerHTML = "";
+            }
+        </script>
+    </body>
+</html>

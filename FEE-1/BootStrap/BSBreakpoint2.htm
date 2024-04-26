@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, intitial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<title>BreakPoints in Media Queries</title>
+<style>
+.custom-class {
+	display: none;
+}
+@media (min-width: 768px){
+	.custom-class {display: block; }
+}
+#div2 {
+	background-color:#d4d4d4;
+}
+</style>
+</head>
+<body>
+
+<div class="text-center">
+<h1 class="text-success">Breakpoints</h1>
+<h2>BreakPoint max-width</h2>
+
+<br>
+
+<div class="custom-class" id="div2">
+<h4>This block disappears when width of screen is less than 768px and appears when width of display is more than 768px.</h4>
+</div>
+</div>
+</body>
+</html>
+

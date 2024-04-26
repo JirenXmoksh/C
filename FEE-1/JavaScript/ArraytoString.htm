@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array to string in JS
+        </title>
+    </head>
+    <body>
+        <p>The toString() method returns an array as a comma seperated string</p>
+        <p id="a"></p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"]
+            document.getElementById("a").innerHTML = fruits.toString(); ///innerHTML acts as a return statement
+            document.getElementById("a").innerHTML = fruits.join(" | ");
+        </script>
+    </body>
+</html>

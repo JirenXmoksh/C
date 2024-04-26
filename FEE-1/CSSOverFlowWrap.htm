@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+div {
+width: 350px;
+border: 5px solid red;
+}
+div.a {
+overflow-wrap: normal;
+}
+div.b {
+overflow-wrap: break-word;
+}
+div.c {
+
+}
+
+</style>
+</head>
+<body>
+<!--
+normal wont break, overflows
+anywhere break if overflow
+break word break if overflow
+initial
+inherit
+-->
+<h1> The overflow-wrap Property</h1>
+<h2>overflow-wrap: normal(default)</h2>
+<div class="a">
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long woradadadadadakdhadhahdahhahdlahdlkadldahdd The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+THIS IS NOT SUPPOSED TO WRAP</div>
+<h2>overflow-wrap: break-word</h2>
+<div class="b">
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+</div>
+<h2>overflow-wrap: anywhere</h2>
+<div class="c">
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+This div contains a very long word The long word wont break and will not wrap to the next line
+</div>
+</body>
+</html>

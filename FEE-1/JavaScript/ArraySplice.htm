@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array splicing in JS
+        </title>
+    </head>
+    <body>
+        <p>The splice() method can be used to add new items to an array </p>
+        <button onclick="splicefunction()">Try splicing</button>
+        <p id="a"></p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"]
+            document.getElementById("a").innerHTML = fruits.join(" | ");
+
+            function splicefunction() {
+                fruits.splice(0,4,"Lemon", "Kiwi");
+                document.getElementById("a").innerHTML = fruits.join(" | ");
+            }
+        </script>
+    </body>
+</html>

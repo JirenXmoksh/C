@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <p>Modify the text in the input field, then click outside the field to fire the onchange event.</p>
+        Enter some text: <input placeholder="Here" "text" name="txt" onchange="alertFunc(this.value)">
+        <script>
+            function alertFunc(val){
+                alert('The input value has been changed. The new value is:'+val);
+            }
+        </script>
+    </body>
+</html>

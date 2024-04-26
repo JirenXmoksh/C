@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Your Family</title>
+
+<link  rel="stylesheet" href="stylesheet5.css" media="all">
+<link rel="icon" type="image/x-icon" href="mainfavicon.jpg">
+<title>Survey</title>
+<style>
+html, body {
+overflow-x: hidden;
+}
+</style>
+<script>
+    function validateemail(){
+        var x = document.myform.field4.value;
+        var atposition = x.indexOf("@");
+        var dotposition = x.lastIndexOf(".");
+        if(atposition<1 || dotposition<atposition+2){
+            alert("Enter a valid e-mail address please");
+            return false;
+        }
+    }
+    function validateDOB() {
+      var dob = document.getElementById("field3").value;
+      var dateRegex = /^\d{2}\/\d{2}\/\d{4}$/; // Regular expression for DD/MM/YYYY format
+      
+      if (!dateRegex.test(dob)) {
+        alert("Please enter Date of Birth in the format DD/MM/YYYY");
+        return false;
+      }
+
+      var parts = dob.split('/');
+      var day = parseInt(parts[0], 10);
+      var month = parseInt(parts[1], 10);
+      var year = parseInt(parts[2], 10);
+
+      if (year < 1900 || year > new Date().getFullYear()) {
+        alert("Please enter a valid year between 1900 and the current year");
+        return false;
+      }
+
+      var maxDay = new Date(year, month, 0).getDate();
+      if (day <= 0 || day > maxDay) {
+        alert("Please enter a valid day for the selected month and year");
+        return false;
+      }
+
+      return true;
+    }
+</script>
+</head>
+<body>
+<div id="firstDiv"><h1 id="firstDivHead" style="text-align:center;">YOUR FAMILY</h1>
+<a href="SurveyFormIntroPage.htm" style="text-decoration: none;"><p id="buttontext">Home</p></a>
+</div>	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="secondDiv">Your response will be kept confidential! So feel free to answer the questions.</div>
+<br>
+<br>
+
+<form onreset="resetFunc()" onsubmit="return (validateemail() & validateDOB())" onsubmit="subFunc()" name="myform">
+<br>
+<fieldset id="Fset1">
+<legend id="leg1">About You</legend><br>
+
+<table border="0" cellspacing="10px" cellpadding="8pt">
+<tr>
+    <td>
+        <p id="p2" style="display:inline">Gender: </p>
+    </td>
+    <td>
+        <label for="op1"></label>
+     
+        <input type="radio" name="option1" value="op1" id="op1" required>Male
+        
+        &nbsp
+        &nbsp
+        
+        <label for="op2"></label>
+        <input type="radio" name="option1" value="op2" id="op2" required>Female
+        
+        &nbsp 
+        &nbsp 
+        
+        <label for="op3"></label>
+        <input type="radio" name="option1" value="op3" id="op3" required>Other
+        
+    </td>
+</tr>
+
+
+
+<tr>
+<td>
+<label for="field1"><font color="#f6f1d1">First name:</font> </label>
+</td>
+<td>
+<input placeholder="Your first name" type="text" id="field1" name="field1" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field2"><font color="#f6f1d1">Last name:</font> </label>
+</td>
+<td>
+<input placeholder="Your last name" type="text" id="field2" name="field2" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field3"><font color="#f6f1d1">DOB:</font> </label>
+</td>
+<td>
+<input placeholder="DD/MM/YYYY" type="text" id="field3" name="field3" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field4"><font color="#f6f1d1">Email ID:</font> </label>
+</td>
+<td>
+<input placeholder="example123@gmail.com" type="text" id="field4" name="field4" required>
+</td>
+</tr>
+</table>
+<br>
+<br>
+</fieldset>
+
+<br>
+<br>
+<br>
+
+<fieldset id="Fset2">
+<legend id="leg2">Your Family</legend>
+<br>
+&nbsp
+&nbsp
+&nbsp
+<table border="0" cellspacing="10px">
+<tr>
+    <td>
+        <p id="p3" style="display:inline">I. How many family members are there in your family? </p>
+    </td>
+    <td>
+        <label for="op1"></label>
+        <input type="radio" name="option2" value="op1" id="op1" required> 3-4
+
+        &nbsp
+        &nbsp
+        <label for="op2"></label>
+        <input type="radio" name="option2" value="op2" id="op2" required> 5-7
+
+        &nbsp
+        &nbsp
+        <label for="op2"></label>
+        <input type="radio" name="option2" value="op2" id="op2" required> More than 8
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <p id="p3" style="display:inline">II. What is your preferred family activity? </p>
+    </td>
+    <td>
+        <label for="op1"></label>
+        <input type="radio" name="option3" value="op1" id="op1" required> Outdoor sports
+
+        &nbsp
+        &nbsp
+        <label for="op2"></label>
+        <input type="radio" name="option3" value="op2" id="op2" required> Movie nights at home
+        <br>
+        <label for="op3"></label>
+        <input type="radio" name="option3" value="op3" id="op3" required> Board games
+
+        &nbsp
+        &nbsp
+        <label for="op4"></label>
+        <input type="radio" name="option3" value="op4" id="op4" required> Arts and crafts
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <p id="p3">III. How would you describe the level of support within our family during challenging times?  </p></label>
+    </td>
+    <td>
+        <label for="op1"></label>
+        <input type="radio" name="option4" value="op1" required><font color="#660000">Really bad</font>
+        
+        <label for="op1"></label>&nbsp
+        <input type="radio" name="option4" value="op2" required><font color="#cc6600"> Can be improved</font>
+        
+        <label for="op1"></label>&nbsp
+        <input type="radio" name="option4" value="op3" required><font color="#999900">Good, I am satisfied</font>
+        <br>
+        <label for="op1"></label>
+        <input type="radio" name="option4" value="op4" required><font color="#4c9900"> More than one could ask for</font>
+        
+        <label for="op1"></label>&nbsp
+        <input type="radio" name="option4" value="op5" required><font color="#00cc00"> Excellent!</font>
+    </td>
+</tr>
+
+
+<br>
+<br>
+
+<tr>
+<td>
+<label for="field8"><font size="4px" color="#f6f1d1">IV. What does family time mean to you, and how often do you engage in it? </font></label>
+</td>
+<td>
+<input placeholder="distractive, energetic, dumb, learning, active etc" type="text" id="field8" name="field8" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field9"><font size="4px" color="#f6f1d1">V. Please descire a memorable family tradition/festival you enjoy: </font></label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field9" name="field9" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field10"><font size="4px" color="#f6f1d1">VI. Share a special achievement or moment within the family that made you proud.</font></label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field10" name="field10" required>
+</td>
+</tr>
+
+<tr>
+    <td>
+        <p id="p2" style="display:inline">VII. In what ways would you prefer to resolve family conflicts? </p></label>
+    </td>
+    <td>
+        <label for="op1">
+            <input type="checkbox" name="option5" value="op1" id="op1">Open discussion
+            <label for="op2">
+            <input type="checkbox" name="option5" value="op2" id="op2">Seeking a mediator
+            <br>
+            <label for="op3">
+            <input type="checkbox" name="option5" value="op3" id="op3">Time apart to cool down
+            <label for="op4">
+            <input type="checkbox" name="option5" value="op4" id="op4">Writing out concerns and discussing later
+    </td>
+</tr>
+</table>
+
+
+
+<br>
+
+</fieldset>
+<br>
+<br>
+
+<!--<h4 style="display:inline">Select the following:</h4><br>
+<label class="checkb1" for="checkb1"></label>
+<input type="checkbox" id="checkb1" name="checkb1" value="Checkb1">Checkb1
+<span id="checkmark"></span>
+
+<label for="checkb2"></label>
+<input type="checkbox" id="checkb2" name="checkb1" value="Checkb2">Checkb2
+<br>
+<label for="checkb3"></label>
+<input type="checkbox" id="checkb3" name="checkb3" value="Checkb3">Checkb3
+
+<label for="checkb4"></label>
+<input type="checkbox" id="checkb4" name="checkb4" value="Checkb4">Checkb4-->
+
+<!-- add more if needed--> 
+<br>
+<br>
+<br>
+<center>
+<label for="desc1"><caption><font color="#f6f1d1">Feel free to share your thoughts</font></caption></label><br>
+<textarea placeholder="Here..." id="desc1" rows="14" cols="130" style="resize:none">
+</textarea>
+</center>
+<br>
+<br>
+<br>
+<br>
+<center>
+<label for="sub"></label>
+<input type="submit" name="submit" value="SUBMIT" id="sub">
+<label for="res"></label>&nbsp &nbsp
+<input type="reset" name="clearform" value="CLEAR" id="res">
+<div style="color:#f6f1d1; padding-top:10px;">The response will be submitted without any message once you fill 
+    all the fields correctly and click on submit or press Enter when on the last field!</div>
+</center>
+</form>
+<script>
+    function resetFunc() {
+        alert("All the inputs have been cleared!");
+    }
+    function subFunc() {
+        alert("The form has been submitted. Thank You!");
+    }
+    function keyupFunc() {
+        var x = document.getElementById("field1");
+        x.value = x.value.toUpperCase(); 
+
+        var x = document.getElementById("field2");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+</body>
+</html>

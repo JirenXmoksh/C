@@ -1,0 +1,31 @@
+#main {
+background-color: black;
+}
+
+#one {
+float:left;
+width: 1000px;
+height: 200px;
+background-color: #cccccc;
+}
+
+#two {
+width: 1000px;
+height: 150px;
+float: left;
+background-color: #cfffcc;
+}
+
+#three {
+width: 1000px;
+height: 100px;
+background-color: #33ffff;
+float: left;
+}
+
+#bottom {
+width: 1000px;
+height: 80px;
+background-color: #990033;
+float: left;
+}

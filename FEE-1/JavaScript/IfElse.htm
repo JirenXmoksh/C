@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>First conditional</h2>
+        <h3>Printing till five</h3>
+        <script>
+            var x = 1;
+            document.write("Entering the loop <br>")
+            while(x<20) {
+                if(x==5) {
+                    break; //breaks out of loop
+                }
+                x = x+1;
+                document.write(x+"<br>")
+            }
+            document.write('Exiting the loop! <br>')
+        </script>
+
+          <h2>Second conditional</h2>
+          <h3>Skipping five</h3>
+        <script>
+            var x = 1;
+            document.write("Entering the loop <br>")
+            while(x<10) {
+                x = x+1;
+                if(x==5) {
+                    continue;
+                }
+                document.write(x+"<br>")
+            }
+            document.write('Exiting the loop! <br>')
+        </script>
+
+          <h2>Third conditional</h2>
+          <h3>Inner and Outer Loops</h3>
+        <script>
+            outerloop:
+            for (var i = 0; i<5; i++) {
+                document.write("OuterLoop: "+i+"<br>");
+            }
+            document.write("<br>")
+            innerloop:
+            for (var j=0; j<5; j++) {
+                document.write("InnerLoop: "+j+"<br>")
+            }
+            document.write('Exiting the loop')
+        </script>
+    </body>
+</html>

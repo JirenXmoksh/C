@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Onmouseover  and onmouseout events in JS
+        </title>
+    </head>
+    <body>
+        <center>
+        <div onmouseover="big(this)" onmouseout="normal(this)" 
+         style="background-color: blue; width:50px; height:50px; border-radius: 20%;"></div>
+        </center>
+        <p>The function big() is triggered when the user moves the mouse pointer over the image.</p>
+        <p>The function normal() is triggered when the mouse pointer is moved off the image.</p>
+        <script>
+            function big(x) {
+                x.style.height = "100px";
+                x.style.width = "100px";
+            }
+            function normal(x) {
+                x.style.height = "50px";
+                x.style.width = "50px";
+            }
+        </script>
+    </body>
+</html>

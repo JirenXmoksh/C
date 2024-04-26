@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#main {
+width: 250px;
+height: 100px;
+border: 1px solid #c3c3c3;
+display: flex;
+}
+#main div {
+flex: 0 0 50px;
+}
+</style>
+</head>
+<body>
+<h1>Change flex with JavaScript</h1>
+<div id="main">
+<div style="background-color:coral;">Red DIV</div>
+<div style="background-color:lightblue" id="myBlueDiv">Blue DIV</div>
+</div>
+<p>Click the "Try it" button to set the value to "200px"</p>
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+document.getElementById("myBlueDiv").style.flex = "0 0 200px";
+}
+</script>
+</body>
+</html>

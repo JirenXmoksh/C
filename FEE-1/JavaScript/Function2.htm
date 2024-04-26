@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Function Call 2
+        </title>
+        <script>
+            function concatenate(first,last) {
+               var full;
+               full = first + last;
+               return full;
+            }
+            function secondFunction(){
+                var result;
+                result = concatenate('3', ' Idiots');
+                document.write(result);
+            }
+        </script>
+    </head>
+    <body>
+        <p>
+            Click the following button to call a concatenation function.
+        </p>
+        <form>
+            <input type="button" onclick="secondFunction()" value="Call Function">
+        </form>
+    </body>
+</html>

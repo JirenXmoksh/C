@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Social Media</title>
+<link rel="icon" type="image/x-icon" href="mainfavicon.jpg">
+<link  rel="stylesheet" href="stylesheet3.css" media="all">
+<title>Survey</title>
+</head>
+<script>
+    function validateemail(){
+        var x = document.myform.field4.value;
+        var atposition = x.indexOf("@");
+        var dotposition = x.lastIndexOf(".");
+        if(atposition<1 || dotposition<atposition+2){
+            alert("Enter a valid e-mail address please");
+            return false;
+        }
+    }
+    function validateDOB() {
+      var dob = document.getElementById("field3").value;
+      var dateRegex = /^\d{2}\/\d{2}\/\d{4}$/; // Regular expression for DD/MM/YYYY format
+      
+      if (!dateRegex.test(dob)) {
+        alert("Please enter Date of Birth in the format DD/MM/YYYY");
+        return false;
+      }
+
+      var parts = dob.split('/');
+      var day = parseInt(parts[0], 10);
+      var month = parseInt(parts[1], 10);
+      var year = parseInt(parts[2], 10);
+
+      if (year < 1900 || year > new Date().getFullYear()) {
+        alert("Please enter a valid year between 1900 and the current year");
+        return false;
+      }
+
+      var maxDay = new Date(year, month, 0).getDate();
+      if (day <= 0 || day > maxDay) {
+        alert("Please enter a valid day for the selected month and year");
+        return false;
+      }
+
+      return true;
+    }
+</script>
+<body>
+<div id="firstDiv"><p id="firstDivHead" style="text-align:center; font-weight: bold;">SOCIAL MEDIA</p>
+<a href="SurveyFormIntroPage.htm" style="text-decoration: none;"><div id="buttontext" >Home</div></a>
+</div>	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="secondDiv">Feel free to share your experiences as this reponse will 
+    be kept purely confidential and used only for informational purposes.</div>
+    <br>
+
+<form onreset="resetFunc()" onsubmit="return (validateemail() & validateDOB())" onsubmit="subFunc()" name="myform">
+<br>
+<fieldset id="Fset1">
+<legend id="leg1">About You</legend>
+
+<table border="0" cellspacing="10px" cellpadding="8pt">
+
+<tr>
+<td>
+<label for="field1"><font color="#f6f1d1">First name:</font>  </label>
+</td>
+<td>
+<input placeholder="Your first name" type="text" id="field1" name="field1" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field2"><font color="#f6f1d1">Last name:</font> </label>
+</td>
+<td>
+<input placeholder="Your last name" type="text" id="field2" name="field2" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field3"><font color="#f6f1d1">DOB:</font> </label>
+</td>
+<td>
+<input placeholder="DD/MM/YYYY" type="text" id="field3" name="field3" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field4"><font color="#f6f1d1">Email ID:</font> </label>
+</td>
+<td>
+<input placeholder="example123@gmail.com" type="text" id="field4" name="field4" required>
+</td>
+</tr>
+
+<tr>
+    <td>
+        <p id="p1" style="display:inline"><font color="#f6f1d1">Gender:</font> </p>
+    </td>
+    <td>
+        <label for="op1"></label>
+        <input type="radio" name="option1" value="op1" id="op1" >Male
+        &nbsp
+        &nbsp
+        <label for="op2"></label>
+        <input type="radio" name="option1" value="op2" id="op2" required>Female
+        &nbsp
+        &nbsp
+        <label for="op3"></label>
+        <input type="radio" name="option1" value="op3" id="op3" required>Other
+    </td>
+</tr>
+</table>
+
+</fieldset>
+
+<br>
+<br>
+<br>
+
+<fieldset id="Fset2">
+<legend id="leg2">Our questions to you</legend>
+
+<table border="0" cellspacing="15px">
+
+<tr>
+<td>
+
+<p id="p2" style="display:inline">I. What is your average screen time on social media? &nbsp </p>
+</td>
+<td>
+<label for="op1"></label>
+<input type="radio" name="option2" value="op1" id="op1" required>Less than 2 hours
+&nbsp
+&nbsp
+<label for="op2"></label>
+<input type="radio" name="option2" value="op2" id="op2" required>Between 2 and 4 hours
+&nbsp
+&nbsp
+<br>
+<label for="op3"></label>
+<input type="radio" name="option2" value="op3" id="op3" required>More than 4 hours
+</td>
+</tr>
+
+<tr>
+<td>
+<p id="p2" style="display:inline">II.Which social media apps  do you use? </p></label>
+</td>
+<td>
+<label for="op1"></label>
+<input type="checkbox" name="option3" value="op1" id="op1">Facebook
+<label for="op2"></label>
+&nbsp
+<input type="checkbox" name="option3" value="op2" id="op2">Linkedin
+<label for="op3"></label>
+&nbsp
+<input type="checkbox" name="option3" value="op3" id="op3">Instagram
+<label for="op4"></label>
+&nbsp
+<input type="checkbox" name="option3" value="op4" id="op4">Snapchat
+<label for="op5"></label>
+
+&nbsp<br>
+<input type="checkbox" name="option3" value="op5" id="op5">Twitter
+<label for="op6"></label>
+&nbsp
+<input type="checkbox" name="option3" value="op6" id="op6">My Space
+<label for="op7"></label>
+&nbsp
+<input type="checkbox" name="option3" value="op7" id="op7">Xing
+<label for="op8"></label>
+&nbsp
+<input type="checkbox" name="option3" value="op8" id="op8">Others
+</td>
+</tr>
+
+<tr>
+<td>
+<p id="p2" style="display:inline">III. How often do you use these apps?</p></label>
+</td>
+
+
+<td>
+<label for="op1"></label>
+<input type="radio" name="option4" value="op1" required>Everyday
+<label for="op2"></label>
+<input type="radio" name="option4" value="op2" required>Twice a week
+<label for="op3"></label>
+<input type="radio" name="option4" value="op3" required>Once a week
+<label for="op4"></label>
+<input type="radio" name="option4" value="op4" required>Once a month
+</td>
+</tr>
+
+<tr>
+<td>
+<p id="p2" style="display:inline"> IV. What kind of impact do you think these apps have on children?</p>
+</td>
+<td>
+<label for="op1"></label>
+
+<input type="radio" name="option5" value="op1" id="op1" required>Positive!
+&nbsp
+&nbsp
+<label for="op2"></label>
+<input type="radio" name="option5" value="op2" id="op2" required>Negative
+</td>
+</tr>
+
+<tr>
+<td>
+<p id="p2" style="display:inline">V. Have you ever felt like you lost track of time on social media?</p>
+</td>
+<td>
+<label for="op1"></label>
+
+<input type="radio" name="option6" value="op1" id="op1" required>Yes
+&nbsp
+&nbsp
+<label for="op2"></label>
+<input type="radio" name="option6" value="op2" id="op2" required>No
+</td>
+</tr>
+
+<tr>
+<td>
+<p id="p2" > VI. Do you think your family time is being affected because of social media?</p> 
+</td>
+<td>
+<label for="op1"></label>
+
+<input type="radio" name="option7" value="op1" id="op1" required>Absolutely not
+&nbsp
+&nbsp
+<label for="op2"></label>
+<input type="radio" name="option7" value="op2" id="op2" required>Yes, I realise that
+&nbsp
+&nbsp
+<br>
+<label for="op3"></label>
+<input type="radio" name="option7" value="op3" id="op3" required>I dont use social media that much which would affect my family time
+
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field5"> <font color="#f6f1d1">VII. Which social media app you use the most?</font></label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field10" name="field10" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field6"><font color="#f6f1d1">VIII. What are the steps your must take to reduce your social media apps?</font></label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field10" name="field10" required>
+</td>
+</tr>
+</table>
+
+</fieldset>
+
+<br>
+<br>
+<br>
+
+<center>
+<label for="desc1"><caption><font color="#f6f1d1">Feel free to share your thoughts</font></caption></label><br>
+<textarea placeholder="Here..." id="desc1" rows="14" cols="130" style="resize:none">
+</textarea>
+</center>
+<br>
+<br>
+<br>
+<br>
+<center>
+<label for="sub"></label>
+<input type="submit" name="submit" value="SUBMIT" id="sub">
+<label for="res"></label>&nbsp &nbsp
+<input type="reset" name="clearform" value="CLEAR" id="res">
+<div style="color:#f6f1d1; padding-top:10px;">The response will be submitted without any message once you fill all the fields correctly and click on submit or press Enter when on the last field!</div>
+
+</center>
+</form>
+<script>
+    function resetFunc() {
+        alert("All the inputs have been cleared!");
+    }
+    function subFunc() {
+        alert("The form has been submitted. Thank You!");
+    }
+    function keyupFunc() {
+        var x = document.getElementById("field1");
+        x.value = x.value.toUpperCase(); 
+
+        var x = document.getElementById("field2");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+</body>
+</html>

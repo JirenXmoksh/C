@@ -1,0 +1,261 @@
+@font-face {
+	font-family: markpro; 
+	src: url('MarkPro.TTF');
+	}
+	@font-face {
+	font-family: Madina; 
+	src: url('Madina.TTF');
+	}
+	#firstDiv {
+		background-color: #1E1B18;
+		color:  #f6F1D1;
+		height: 190px;
+		font-size: 30px;
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		box-shadow: 1px 1px 10px black;
+	}
+	#firstDivHead{
+		position: relative;
+		top: 30px;
+	}
+	#buttontext {
+		font-family: markpro;
+		font-size: 15px;
+		letter-spacing: 1px;
+		color:  #f6F1D1;
+		background-color: #235842;
+		position: relative;
+		top: -70px;
+		left: 50px;
+		width: 48px;
+		text-decoration: none;
+		border: 2px solid  #f6F1D1;
+		border-radius: 30px;
+		padding: 8px;
+		transition: 0.3s;
+	}
+	#buttontext:hover {
+		transform: scale(0.996);
+		font-weight: bold;
+		background-color: #f6F1D1;
+		color: #1E1B18;
+	}
+	#secondDiv {
+		font-size: 18px;
+		text-align: center;
+		color: #f6F1D1
+	}
+	#dropdown1 {
+		color: #1E1B18;
+		font-weight: bold;
+		border: 2px outset #1E1B18;
+		background-color: #f6f1d1;
+		border-radius: 10px;
+		width: 100px;
+	}
+	#dropdown2 {
+		color: #1E1B18;
+		font-weight: bold;
+		border: 2px outset #1E1B18;
+		background-color: #f6f1d1;
+		border-radius: 10px;
+		width: 100px;
+	}
+	body {
+		font-family: markpro;
+		background-color: #1E1B18;
+		padding-top: 30px;
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-bottom: 30px;
+	}
+	#field1 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+		
+	}
+	#field2 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	#field3 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	#field4 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	#field5 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	#field6 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	#field7 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	#field8 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	#field9 {
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	#field10{
+		color: #A8201A;
+		font-weight: bold;
+		border-radius: 20px;
+		background-color:#f6F1D1;
+		border: 2px solid #1e1b18;
+		width: 600px;
+		height: 18px;
+	}
+	
+	#Fset1 {
+		border: 2px solid #f6F1D1;
+		background-color: #235842;
+		border-radius: 30px;
+	}
+	#leg1{
+		color:#f6F1D1;
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: 0.4em;
+		padding: 10px;
+		background-color: #40916C;
+		border: 2px solid #f6F1D1;
+		border-radius: 20px;
+		font-family:markpro;	
+	}
+	#Fset2 {
+		border: 2px solid #f6F1D1;
+		background-color: #235842;
+		border-radius: 30px;
+	}
+	#leg2{
+		color:#f6F1D1;
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: 0.4em;
+		padding: 10px;
+		background-color: #40916C;
+		border: 2px solid #f6F1D1;
+		border-radius: 20px;
+		font-family:markpro;
+	}
+	#desc1 {
+		color: #f6F1D1;
+		font-weight: bold;
+		font-size: 17px;
+		background-color:#1E1B18;
+		border: 2px solid #f6f1d1;
+		border-radius:10px;
+	}
+	
+	#p2 {
+		font-size:18px;
+		color: #f6F1D1;
+	}
+	#p3 {
+		font-size:18px;
+		color: #f6F1D1;
+	}
+	#sub {
+		font-family: markpro;
+		font-size: 14px;
+		color:  #f6F1D1;
+		background-color: #235842;
+		text-decoration: none;
+		border: 2px solid  #f6F1D1;
+		border-radius: 30px;
+		padding: 8px;
+		transition: 0.3s;
+	}
+	#sub:hover {
+		transform: scale(0.996);
+		font-weight: bold;
+		background-color: #f6F1D1;
+		color: #1E1B18;
+	}
+	#res {
+		font-family: markpro;
+		font-size: 14px;
+		color:  #f6F1D1;
+		background-color: #235842;
+		text-decoration: none;
+		border: 2px solid  #f6F1D1;
+		border-radius: 30px;
+		padding: 8px;
+		transition: 0.3s;
+	}
+	#res:hover {
+		transform: scale(0.996);
+		font-weight: bold;
+		background-color: #f6F1D1;
+		color: #1E1B18;
+	}
+	::placeholder {
+		color: #a2a2a2;
+		font-family: markpro;
+	}
+	
+	
+	
+	
+		
+	
+		
+	

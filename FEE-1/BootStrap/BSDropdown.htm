@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<title>BS DropDown</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.bundle.min.js"></script>
+<style>
+.btn {
+	border: 1px solid black;
+	background-color: white;
+}
+.dropdown-menu {
+	background-color: black;
+}
+.dropdown-item {
+	background-color: yellow;
+	border: 1px solid black;
+	border-radius: 20px;
+	color: red;
+}
+.dropdown-item:hover {
+	background-color: purple;
+}
+.btn:hover {
+	background-color: black;
+	color: white;
+	border:white;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="dropdown mt-5 mx-5">
+<button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">
+Web Technologies
+</button>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#">HTML</a></li>
+<li><a class="dropdown-item" href="#">CSS</a></li>
+<li><a class="dropdown-item" href="#">JavaScript</a></li>
+<li><a class="dropdown-item" href="#">BootStrap</a></li>
+</ul>
+</div>
+
+<div class="dropdown mx-4 mt-5 ">
+<button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">
+Just another DropDown
+</button>
+<ul class="dropdown-menu">
+<li class="dropdown-item" style="background-color: red;">Option 1</li>
+<li class="dropdown-item">Option 2</li>
+<li class="dropdown-item">Option 3</li>
+<li class="dropdown-item">Option 4</li>
+<li class="dropdown-item">Option 5</li>
+</ul>
+</div>
+
+<div class="dropdown mx-4 mt-5 ">
+<button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">
+Just another DropDown
+</button>
+<ul class="dropdown-menu">
+<li class="dropdown-item">Option 1</li>
+<li class="dropdown-item">Option 2</li>
+<li class="dropdown-item">Option 3</li>
+<li class="dropdown-item">Option 4</li>
+<li class="dropdown-item">Option 5</li>
+</ul>
+</div>
+
+<div class="dropdown mx-4 mt-5 ">
+<button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">
+Just another DropDown
+</button>
+<ul class="dropdown-menu">
+<li class="dropdown-item">Option 1</li>
+<li class="dropdown-item">Option 2</li>
+<li class="dropdown-item">Option 3</li>
+<li class="dropdown-item">Option 4</li>
+<li class="dropdown-item">Option 5</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>

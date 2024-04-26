@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array pushing in JS
+        </title>
+    </head>
+    <body>
+        <p>The push() method inserts an element at the end of an array: </p>
+        <button onclick="pushfunction()">Try pushing some elements</button>
+        <button onclick = "popfunction()">Try popping some</button>
+        <p id="a"></p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"]
+            document.getElementById("a").innerHTML = fruits.join(" | ");
+            function pushfunction() {
+                fruits.push("Pushed Fruit");
+                document.getElementById("a").innerHTML = fruits.join(" | ");
+            }
+
+            function popfunction(){
+                fruits.pop()
+                document.getElementById("a").innerHTML = fruits.join(" | ")
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array slicing in JS
+        </title>
+    </head>
+    <body>
+        <p>The slice() method gives us array elements from a specific range in an array </p>
+        <p>Click the button to extract the second and third elements from the array.</p>
+        <button onclick="slicefunction()">Try slicing</button>
+        <p id="a"></p>
+        <script>
+            var fruits = ["Banana", "Orange","Lemon", "Apple", "Mango"]
+            document.getElementById("a").innerHTML = fruits.join(" | ");
+
+            function slicefunction() {
+                var slice = fruits.slice(1,3)
+                document.getElementById("a").innerHTML = slice.join(" | ");
+            }
+        </script>
+    </body>
+</html>

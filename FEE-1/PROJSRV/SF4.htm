@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Child labour</title>
+<link rel="icon" type="image/x-icon" href="mainfavicon.jpg">
+<link  rel="stylesheet" href="stylesheet4.css" media="all">
+<style>
+html, body {
+overflow-x: hidden;
+}
+</style>
+<script>
+    function validateemail(){
+        var x = document.myform.field4.value;
+        var atposition = x.indexOf("@");
+        var dotposition = x.lastIndexOf(".");
+        if(atposition<1 || dotposition<atposition+2){
+            alert("Enter a valid e-mail address please");
+            return false;
+        }
+    }
+    function validateDOB() {
+      var dob = document.getElementById("field3").value;
+      var dateRegex = /^\d{2}\/\d{2}\/\d{4}$/; // Regular expression for DD/MM/YYYY format
+      
+      if (!dateRegex.test(dob)) {
+        alert("Please enter Date of Birth in the format DD/MM/YYYY");
+        return false;
+      }
+
+      var parts = dob.split('/');
+      var day = parseInt(parts[0], 10);
+      var month = parseInt(parts[1], 10);
+      var year = parseInt(parts[2], 10);
+
+      if (year < 1900 || year > new Date().getFullYear()) {
+        alert("Please enter a valid year between 1900 and the current year");
+        return false;
+      }
+
+      var maxDay = new Date(year, month, 0).getDate();
+      if (day <= 0 || day > maxDay) {
+        alert("Please enter a valid day for the selected month and year");
+        return false;
+      }
+
+      return true;
+    }
+</script>
+</head>
+<body>
+<div id="firstDiv"><p id="firstDivHead" style="text-align:center;">CHILD LABOUR</p>
+<a href="SurveyFormIntroPage.htm" style="text-decoration:none;"><p id="buttontext">Home</p></a>
+</div>	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="secondDiv">Your response will be kept confidential! So do not hesitate in any way to tell the truth.</div>
+<br>
+
+<form onreset="resetFunc()" onsubmit="return (validateemail() & validateDOB())" onsubmit="subFunc()" name="myform">
+<br>
+<fieldset id="Fset1">
+<legend id="leg1">About You</legend><br>
+&nbsp 
+&nbsp 
+<table border="0" cellspacing="10px" cellpadding="8pt">
+<tr>
+<td>
+<p id="p2" style="display:inline">Gender: </p>
+</td>
+
+<td>
+<label for="op1"></label>
+<input type="radio" name="option1" value="op1" id="op1" required>Male
+
+&nbsp
+&nbsp
+
+<label for="op2"></label>
+<input type="radio" name="option1" value="op2" id="op2" checrequiredked>Female
+
+&nbsp 
+&nbsp 
+
+<label for="op3"></label>
+<input type="radio" name="option1" value="op3" id="op3" required>Other
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field1">First name: </label>
+</td>
+<td>
+<input placeholder="Your first name" type="text" id="field1" name="field1" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field2">Last name: </label>
+</td>
+<td>
+<input placeholder="Your last name" type="text" id="field2" name="field2" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field3">DOB: </label>
+</td>
+<td>
+<input placeholder="DD/MM/YYYY" type="text" id="field3" name="field3" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field4">Email ID: </label>
+</td>
+<td>
+<input placeholder="example123@gmail.com" type="text" id="field4" name="field4" required> 
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field5">Institute Name: </label>
+</td>
+<td>
+<input placeholder="abc scl/uni/clg, place" type="text" id="field5" name="field5" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field6">Course/Stream: </label>
+</td>
+<td>
+<input placeholder="Example: B.Tech/BCA/Non-med/Med etc" type="text" id="field6" name="field6" onkeyup="keyupFunc(this)" required> 
+</td>
+</tr>
+&nbsp 
+
+<tr>
+<td>
+<label for="dropdown1"><p style="display:inline">Year of Study (if college):</p> </label>
+</td>
+<td>
+<select id="dropdown1" >
+<option name="op1" value="op1">1st</option>
+<option name="op2" value="op2">2nd</option>
+<option name="op3" value="op3">3rd</option>
+<option name="op4" value="op4">4th</option>
+<option name="op4" value="op4">None</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="dropdown2"><p style="display:inline">Standard (if school):</p> </label>
+</td>
+<td>
+<select id="dropdown2" >
+<option name="op1" value="op1">9th</option>
+<option name="op2" value="op2">10th</option>
+<option name="op3" value="op3">11th</option>
+<option name="op4" value="op4">12th</option>
+<option name="op5" value="op5">8th or lower</option>
+<option name="op5" value="op5">None</option>
+</select>
+</td>
+</tr>
+
+</table>
+
+</fieldset>
+
+<br>
+<br>
+<br>
+
+<fieldset id="Fset2">
+<legend id="leg2">Questionnaire</legend>
+<br>
+&nbsp
+
+<table border="0" cellspacing="10px" cellpadding="5px">
+
+<tr>
+<td>
+<p id="p3" style="display:inline">I. Will children be worse off if they dont work? </p>
+</td>
+
+<td>
+<label for="op1"></label>
+
+<input type="radio" name="option2" value="op1" id="op1" > Yes
+
+&nbsp
+&nbsp
+
+<label for="op2"></label>
+<input type="radio" name="option2" value="op2" id="op2" required> No
+</td>
+</tr>
+
+<tr>
+<td>
+<font size="4px">II. What do you think of the reasons of the child labour phenomenon?</font>
+</td>
+&nbsp 
+&nbsp 
+<td>
+<input type="radio" name="option3" value="op1" required>Poverty
+<label for="op1"></label>&nbsp
+<input type="radio" name="option3" value="op2" required>Education
+<label for="op2"></label>&nbsp
+<input type="radio" name="option3" value="op3" required>Political System
+<label for="op3"></label>&nbsp
+<input type="radio" name="option3" value="op4" required>Culture
+</td>
+</tr>
+<br>
+<br>
+
+<tr>
+<td>
+<label for="field8"><font size="4px">III. Please describe your opinions about this evil practice in a few words: </font></label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field8" name="field8" required >
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field9"><font size="4px">IV. What will be the possible actions taken from your side if you were given a chance to help a victim?</font></label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field9" name="field9" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field10"><font size="4px">V. If you were given the authority to put in place some rules, regulations, punishments for the guilty, what would they be? </font></label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field10" name="field10" required>
+</td>
+</tr>
+
+<tr>
+<td>
+
+<font size="4px">VI. How often you come across victims of child labour?  </font>
+</td>
+<td>
+<label for="op1"></label>
+<input type="radio" name="Option3" value="op1" id="op1" required>Very Oftenly
+&nbsp &nbsp &nbsp
+<label for="op2"></label>
+<input type="radio" name="Option3" value="op2" id="op2" required>Oftenly
+<br>
+<label for="op3"></label>
+<input type="radio" name="Option3" value="op3" id="op3" required>No, I dont come across such cases at all.
+</td>
+</tr>
+</table>
+
+</fieldset>
+<br>
+<br>
+
+<!--<h4 style="display:inline">Select the following:</h4><br>
+<label class="checkb1" for="checkb1"></label>
+<input type="checkbox" id="checkb1" name="checkb1" value="Checkb1">Checkb1
+<span id="checkmark"></span>
+
+<label for="checkb2"></label>
+<input type="checkbox" id="checkb2" name="checkb1" value="Checkb2">Checkb2
+<br>
+<label for="checkb3"></label>
+<input type="checkbox" id="checkb3" name="checkb3" value="Checkb3">Checkb3
+
+<label for="checkb4"></label>
+<input type="checkbox" id="checkb4" name="checkb4" value="Checkb4">Checkb4-->
+
+<!-- add more if needed--> 
+<br>
+<br>
+<br>
+<center>
+<label for="desc1"><caption><font color="#f6f1d1">Feel free to share your thoughts</font></caption></label><br>
+<textarea placeholder="Here..." id="desc1" rows="14" cols="130" style="resize:none">
+</textarea>
+</center>
+<br>
+<br>
+<br>
+<br>
+<center>
+<label for="sub"></label>
+<input type="submit" name="submit" value="SUBMIT" id="sub">
+<label for="res"></label>&nbsp &nbsp
+<input type="reset" name="clearform" value="CLEAR" id="res">
+<div style="color:#f6f1d1; padding-top:10px;">The response will be submitted without any message once you 
+    fill all the fields correctly and click on submit or press Enter when on the last field!</div>
+
+</center>
+</form>
+<script>
+    function resetFunc() {
+        alert("All the inputs have been cleared!");
+    }
+    function subFunc() {
+        alert("The form has been submitted. Thank You!");
+    }
+    function keyupFunc() {
+        var x = document.getElementById("field1");
+        x.value = x.value.toUpperCase(); 
+
+        var x = document.getElementById("field2");
+        x.value = x.value.toUpperCase();
+
+        var x = document.getElementById("field5");
+        x.value = x.value.toUpperCase();
+
+        var x = document.getElementById("field6");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+</body>
+</html>

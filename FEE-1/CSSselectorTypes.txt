@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Internal Style Sheet</title>
+<style type="text/css" media="all>
+h1 {
+color: #36C;
+}
+</style>
+</head>
+<body>
+<h1> Hello! Students</h1>
+</body>
+</html>

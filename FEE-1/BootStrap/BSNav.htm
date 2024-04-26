@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<!--didn't work-->
+<html lang="en">
+<head>
+
+<title>BS collapsibleNavbar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-expand-sm bg-dark navbar-dark">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="#"><img src="image.jpg" height="100px" width="100px"></a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+	<ul class="navbar-nav">
+		<li class="nav-item border border-light rounded-pill text-center my-1 mx-1"><a class="nav-link" href="#"><div class="spinner-border spinner-border-sm text-light"></div>Home</a></li>
+		<li class="nav-item border border-light rounded-pill text-center my-1 mx-1"><a class="nav-link" href="#">Administration</a></li>
+		<li class="nav-item border border-light rounded-pill text-center my-1 mx-1"><a class="nav-link" href="#">Gallery</a></li>
+		<li class="nav-item-dropdown border border-light rounded-pill text-center my-1 mx-1">
+			<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Departments</a>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Engineering</a></li>
+				<li><a class="dropdown-item" href="#">Business</a></li>
+				<li><a class="dropdown-item" href="#">Computer Applications</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</nav>
+<div class="container-fluid mt-3">
+		<h3>Example Navbar</h3>
+		<p>This is an example of navbar which includes a navbar/menubar with menus and dropdown menus</p>
+</div>
+</div>
+</body>
+</html>

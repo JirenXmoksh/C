@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<title>BreakPoints in Media Queries</title>
+<style>
+@media (min-width: 768px)and (max-width: 992px){
+	.cu1 {color: green; }
+}
+@media (max-width: 600px) {
+	.cu2 {color: blue; }
+}
+</style>
+</head>
+<body>
+
+<div class="text-center">
+<h1 class="text-danger">Breakpoints</h1>
+<h2>BreakPoints Single breakpoint</h2>
+<br>
+<div class="cu1">
+<h3>Color of this content will be green when width of the display is between 768px and 992px</h3>
+</div>
+<div class="cu2">
+<h3>Color of this content will be blue when width of the display is less than 600px</h3>
+
+</div>
+</body>
+</html>
+

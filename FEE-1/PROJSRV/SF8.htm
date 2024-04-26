@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Financial expenditure and Management</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="stylesheet8.css" media="all">
+<link rel="icon" type="image/x-icon" href="mainfavicon.jpg">
+<title>Survey</title>
+</head>
+<script>
+    function validateemail(){
+        var x = document.myform.field4.value;
+        var atposition = x.indexOf("@");
+        var dotposition = x.lastIndexOf(".");
+        if(atposition<1 || dotposition<atposition+2){
+            alert("Enter a valid e-mail address please");
+            return false;
+        }
+    }
+    function validateDOB() {
+      var dob = document.getElementById("field3").value;
+      var dateRegex = /^\d{2}\/\d{2}\/\d{4}$/; // Regular expression for DD/MM/YYYY format
+      
+      if (!dateRegex.test(dob)) {
+        alert("Please enter Date of Birth in the format DD/MM/YYYY");
+        return false;
+      }
+
+      var parts = dob.split('/');
+      var day = parseInt(parts[0], 10);
+      var month = parseInt(parts[1], 10);
+      var year = parseInt(parts[2], 10);
+
+      if (year < 1900 || year > new Date().getFullYear()) {
+        alert("Please enter a valid year between 1900 and the current year");
+        return false;
+      }
+
+      var maxDay = new Date(year, month, 0).getDate();
+      if (day <= 0 || day > maxDay) {
+        alert("Please enter a valid day for the selected month and year");
+        return false;
+      }
+
+      return true;
+    }
+</script>
+<body>
+<div class="container-fluid cover">
+<div class="col-sm-12 col-md-12 col-lg-12"><div id="firstDiv"><h1 style="text-align:center" id="firstDivHead">Financial expenditure and Management</h1>
+<div class="btn"><a href="SurveyFormIntroPage.htm" style="text-decoration:none"><p id="buttontext">Home</p></a></div>
+</div></div>
+</div>	
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form onreset="resetFunc()"  onsubmit="return (validateemail() & validateDOB())" onsubmit="subFunc()" name="myform"> 
+<br>
+<div class="container">
+<fieldset id="Fset1" class="px-4 pb-3 pt-3">
+<legend id="leg1" class="mt-3 mb-5 mx-2 w-25 text-center p-2">About You</legend>
+
+<table border="0" cellspacing="10px" cellpadding="8pt">
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field1">First name: </label>
+</td>
+<td>
+<input placeholder="Your first name" class="border border-top-0 p-2 mb-3"  type="text" id="field1" onkeyup="keyupFunc(this)" name="field1" required>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field2">Last name: </label>
+</td>
+<td>
+<input placeholder="Your last name" class="border border-end-0 border-bottom-0 p-2 mb-3"  type="text" id="field2" onkeyup="keyupFunc(this)" name="field2" required>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field3">DOB: </label>
+</td>
+<td>
+<input placeholder="DD/MM/YYYY" class="border border-start-0 border-top-0 p-2 mb-3"  type="text" id="field3" name="field3" required>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="field4">Email ID: </label>
+</td>
+<td>
+<input placeholder="example123@gmail.com" class="border border-end-0 border-bottom-0 p-2 mb-3"  type="text" id="field4" name="field4" required>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<label for="dropdown1"><p style="display:inline">Please select your employment status:</p> </label>
+</td>
+<td>
+<select id="dropdown1" class="p-2 rounded-pill mb-3 mt-2" name="dropd" required>
+<option name="op1" value="op1" required>Employed full-time</option>
+<option name="op2" value="op2" required>Employed part-time</option>
+<option name="op3" value="op3" required>Self-employed</option>
+<option name="op4" value="op4" required>Unemployed</option>
+<option name="op5" value="op5" required>Student</option>
+<option name="op5" value="op5" required>Retired</option>
+<option name="op6" value="op6" required>Other</option>
+</select>
+</div>
+</div>
+</td>
+</tr>
+
+
+<tr>
+    <td>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 mt-3">
+            <p id="p1" style="display:inline"> Gender: </p>
+        </div>
+    </td>
+    <td>
+        <label for="op1"></label>
+        <input class="form-check-input" type="radio" name="Option" value="op2" id="op1" required><span id="textgrad2">&nbsp Male</span>
+        &nbsp
+        &nbsp
+        <label for="op2"></label>&nbsp &nbsp &nbsp &nbsp 
+        <input class="form-check-input" type="radio" name="Option" value="op1" id="op2" required><span id="textgrad2" >&nbsp Female</span>
+        &nbsp
+        &nbsp
+        <label for="op3"></label>&nbsp &nbsp &nbsp &nbsp 
+        <input class="form-check-input" type="radio" name="Option" value="op3" id="op3" required><span id="textgrad2" >&nbsp Other</span>
+        </div>
+    </td>
+
+</tr>
+</table>
+
+
+<br>
+<br>
+</fieldset>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container">
+<fieldset id="Fset2"  class="px-4 pb-3 pt-3">
+<legend id="leg2" class="mt-3 mb-5 mx-2 w-25 text-center p-2">Our questions</legend>
+<br>
+
+<table border="0" cellpadding="10px">
+    
+<tr>
+    <td>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+            <p id="p2" style="display:inline">&nbsp I. How often do you review your financial situation? &nbsp: &nbsp </p>
+        </div>
+    </td>
+    <td>
+        <label for="op1"></label>&nbsp &nbsp &nbsp &nbsp &nbsp
+        <input class="form-check-input" type="radio" name="Option1" value="op2" id="op1" required>&nbsp<font id="textgrad2">Daily</font> 
+        &nbsp
+        &nbsp
+        <label for="op2"></label>
+        <input class="form-check-input" type="radio" name="Option1" value="op1" id="op2" required>&nbsp <font id="textgrad2">Weekly</font>
+        &nbsp
+        &nbsp
+        <label for="op3"></label>
+        <input class="form-check-input" type="radio" name="Option1" value="op3" id="op3"  required>&nbsp<font id="textgrad2">Monthly</font> 
+        &nbsp
+        &nbsp
+        <label for="op4"></label>
+        <input class="form-check-input" type="radio" name="Option1" value="op4" id="op4" required>&nbsp<font id="textgrad2">Quarterly</font> 
+        &nbsp
+        &nbsp
+        <label for="op5"></label>
+        <input class="form-check-input" type="radio" name="Option1" value="op5" id="op5" required>&nbsp<font id="textgrad2">Yearly</font> 
+      
+    </td>
+
+</tr>
+
+<tr>
+    <td>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 mb-4 mt-0 mx-2">
+            <div id="p3" style="display:inline"> II .What percentage of your income do you allocate towards savings?  </div></label>
+        </div>
+    </td>
+    <td>
+        <label for="op1"></label>&nbsp &nbsp &nbsp &nbsp &nbsp 
+        <input class="form-check-input" type="radio" name="Option2" value="op1" required>&nbsp <font id="textgrad2">0-10%</font> 
+        <label for="op1"></label>&nbsp &nbsp 
+        <input class="form-check-input" type="radio" name="Option2" value="op2" required>&nbsp <font id="textgrad2">11-25%</font> 
+        <label for="op1"></label>&nbsp &nbsp
+        <input class="form-check-input" type="radio" name="Option2" value="op3" required>&nbsp <font id="textgrad2"> 26-50%</font>
+        <label for="op1"></label>&nbsp &nbsp
+        <input class="form-check-input" type="radio" name="Option2" value="op4" required>&nbsp <font id="textgrad2">51%-70%</font> 
+        <label for="op1"></label>&nbsp &nbsp
+        <input class="form-check-input" type="radio" name="Option2" value="op5" required>&nbsp <font id="textgrad2">76-100%</font> 
+      
+    </td>
+</tr>
+&nbsp
+<tr>
+
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12  mx-1">
+<label for="field8">III. What is your primary source of income?</label>
+</td>
+
+<td>
+<input placeholder="your answer" class="border border-top-0 p-2 mb-3 mx-5"  type="text" id="field8" name="field8" required>
+</td>
+</tr>
+</div>
+</div>
+
+<tr>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12  mx-1">
+<label for="field9">IV. Can you describe your typical monthly expenses?</label>
+</td>
+<td>
+<input placeholder="your answer" class="border border-start-0  border-end-0 p-2 mb-3 mx-5"  type="text" id="field9" name="field9" required>
+</td>
+</tr>
+</div>
+</div>
+
+<tr>
+<td>
+<label for="field10"> &nbspV. What financial goals do you currently have?</label>
+</td>
+<td>
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12 mx-1">
+<input placeholder="your answer" class="border border-bottom-0 p-2 mb-3 mx-5"  type="text" id="field9" name="field10" required>
+</div>
+</div>
+</td>
+</tr>
+
+
+&nbsp
+<tr>
+    <td>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 mb-4 mx-1">
+            <p id="p3" style="display:inline"> VI. What are the primary reasons for your expenses? </p></label>
+        </div>
+    </td>
+    <td required>
+        <label for="op1">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <input class="form-check-input" type="checkbox" name="Option3" value="op1" id="op1">&nbsp <font id="textgrad2">Necessities</font> 
+            <label for="op2">&nbsp &nbsp
+            <input class="form-check-input" type="checkbox" name="Option3" value="op2" id="op2">&nbsp <font id="textgrad2">Leisure</font>
+            <label for="op3">&nbsp &nbsp
+            <input class="form-check-input" type="checkbox" name="Option3" value="op3" id="op3">&nbsp <font id="textgrad2">Savings</font>
+            <label for="op4">&nbsp &nbsp
+            <input class="form-check-input" type="checkbox" name="Option3" value="op4" id="op4">&nbsp <font id="textgrad2">Debt Repayment</font>
+            <label for="op5">&nbsp &nbsp
+            <input class="form-check-input" type="checkbox" name="Option3" value="op5" id="op5">&nbsp <font id="textgrad2">Investments</font>
+            </div>
+    </td>
+</tr>
+
+
+</table>
+
+<br>
+<br>
+
+</fieldset>
+</div>
+<br>
+<br>
+
+<!--<h4 style="display:inline">Select the following:</h4><br>
+<label class="checkb1" for="checkb1"></label>
+<input type="checkbox" id="checkb1" name="checkb1" value="Checkb1">Checkb1
+<span id="checkmark"></span>
+
+<label for="checkb2"></label>
+<input type="checkbox" id="checkb2" name="checkb1" value="Checkb2">Checkb2
+<br>
+<label for="checkb3"></label>
+<input type="checkbox" id="checkb3" name="checkb3" value="Checkb3">Checkb3
+
+<label for="checkb4"></label>
+<input type="checkbox" id="checkb4" name="checkb4" value="Checkb4">Checkb4-->
+
+<!-- add more if needed--> 
+<br>
+<br>
+<br>
+<center>
+<label for="desc1"><caption><span id="textgrad">Feel free to share your thoughts</span></caption></label><br>
+<textarea id="desc1" rows="14" cols="130" style="resize:none">
+</textarea>
+</center>
+<br>
+<br>
+<center>
+<label for="sub"></label>
+
+<input class="mt-5" type="submit" name="submit" value="SUBMIT" id="sub"></div>
+<label for="res"></label>
+<input class="btn" class="my-5" type="reset" name="clearform" value="CLEAR" id="res"></div>
+<div style="color:#9f9; padding-top:10px;">The response will be submitted without any message once you fill all the fields correctly and click on submit or press Enter when on the last field!</div>
+
+</center>
+</form>
+<script>
+    function resetFunc() {
+        alert("All the inputs have been cleared!");
+    }
+    function subFunc() {
+        alert("The form has been submitted. Thank You!");
+    }
+    function keyupFunc() {
+        var x = document.getElementById("field1");
+        x.value = x.value.toUpperCase(); 
+
+        var x = document.getElementById("field2");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head><style>
+#grad1 {
+height: 200px;
+background-color: red;
+background-image: linear-gradient(to left, yellow,black);
+}
+#grad2 {
+height: 200px;
+background-color: red;
+background-image: linear-gradient(black,yellow);
+}
+#grad3 {
+height: 200px;
+background-color: red;
+background-image: linear-gradient(yellow,black);
+}
+#grad4 {
+height: 200px;
+background-color: red;
+background-image: linear-gradient(to right, yellow,black);
+}
+#grad5 {
+height: 200px;
+background-color: red;
+background-image: linear-gradient(to bottom right,#440044,yellow);
+}
+#grad6 {
+height: 400px;
+width : 500px;
+<!-- 
+background-image: radial-gradient(pink 30%,black 25%,red 45%);
+background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+background-image: radial-gradient(farthest-side at 60% 55%, pink, orange, black);
+background-image: radial-gradient(closest-corner at 60% 55%, pink, orange, black);
+background-image: repeating-radial-gradient(blue 10%, yellow 10%, green 15%);
+background-image: radial-gradient(circle, yellow 10%, red, black);
+background-image: radial-gradient(farthest-corner at 60% 25%, red, yellow, black);
+-->
+}
+#grad7 {
+height: 200px;
+width: 200px;
+background-color: red;
+<!--
+background-image: conic-gradient(red 10%,yellow 5%,black 90%);
+background-image: conic-gradient(red, yellow, green, blue, black);
+background-image: conic-gradient(red 45deg, yellow 90deg, green 220deg);
+background-image: conic-gradient(red, yellow, green, blue, black);
+background-image: conic-gradient(red 70deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+border-radius:50%;
+-->
+
+}
+</style></head>
+<body>
+<h1>Linear Gradient- LtoR</h1>
+<div id="grad1"></div>
+<h1>Linear Gradient - TtoB</h1>
+<div id="grad2"></div>
+<h1>Linear Gradient - BtoT</h1>
+<div id="grad3"></div>
+<h1>Linear Gradient - RtoL</h1>
+<div id="grad4"></div>
+
+<h1>Diagonal Gradient - TLtoBR</h1>
+<div id="grad5"></div>
+
+<h1>Radial Gradient</h1>
+<div id="grad6"></div>
+
+<h1>Conic Gradient</h1>
+<div id="grad7"></div>
+</body>
+</html>

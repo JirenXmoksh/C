@@ -1,0 +1,27 @@
+<!-- Types of taking input in a form 
+♦Text 
+
+ Single line, <input>
+ Password Input, <input>
+ Multi-line, <textarea>
+ Attributes:
+  rows
+  cols
+  name (to create a description area)
+ 
+ Attributes:
+  type (the type of input the box will take)
+   includes: text, checkbox, radio, password
+              submit, reset, button, image
+  name (used to give a name to the control)
+  value
+  size
+  maxlength
+♦Checkboxes
+♦Radio Box
+♦Select Box
+ <select> tag and <option> tag
+♦File Select Boxes
+♦Hidden controls Clickable buttons
+♦Submit and Reset Button
+

@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Gaming and e-Sports</title>
+
+<link rel="stylesheet" href="stylesheet7.css" media="all">
+<link rel="icon" type="image/x-icon" href="mainfavicon.jpg">
+<script>
+    function validateemail(){
+        var x = document.myform.field4.value;
+        var atposition = x.indexOf("@");
+        var dotposition = x.lastIndexOf(".");
+        if(atposition<1 || dotposition<atposition+2){
+            alert("Enter a valid e-mail address please");
+            return false;
+        }
+    }
+    function validateDOB() {
+      var dob = document.getElementById("field3").value;
+      var dateRegex = /^\d{2}\/\d{2}\/\d{4}$/; // Regular expression for DD/MM/YYYY format
+      
+      if (!dateRegex.test(dob)) {
+        alert("Please enter Date of Birth in the format DD/MM/YYYY");
+        return false;
+      }
+
+      var parts = dob.split('/');
+      var day = parseInt(parts[0], 10);
+      var month = parseInt(parts[1], 10);
+      var year = parseInt(parts[2], 10);
+
+      if (year < 1900 || year > new Date().getFullYear()) {
+        alert("Please enter a valid year between 1900 and the current year");
+        return false;
+      }
+
+      var maxDay = new Date(year, month, 0).getDate();
+      if (day <= 0 || day > maxDay) {
+        alert("Please enter a valid day for the selected month and year");
+        return false;
+      }
+
+      return true;
+    }
+</script>
+</head>
+<body>
+<div id="firstDiv"><h1 style="text-align:center;" id="firstDivHead">GAMING AND E-SPORTS</h1>
+<a href="SurveyFormIntroPage.htm" style="text-decoration:none;"><div id="buttontext">Home</div></a>
+</div>	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="secondDiv">Feel free to share your experiences as this reponse will 
+be kept purely confidential and used only for informational purposes.</div>
+<br>
+<form onreset="resetFunc()" onsubmit="return (validateemail() & validateDOB())" onsubmit="subFunc()" name="myform">
+<br>
+<fieldset id="Fset1">
+<legend id="leg1">Tell us about yourself</legend>
+<br>
+<br>
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+
+<p id="p2" style="display:inline">Gender: </p>
+<label for="op1"></label>&nbsp &nbsp
+<input type="radio" name="option1" value="op2" id="op1" required>Male
+&nbsp
+&nbsp
+<label for="op2"></label>
+<input type="radio" name="option1" value="op1" id="op2" required>Female
+&nbsp
+&nbsp
+<label for="op3"></label>
+<input type="radio" name="option1" value="op3" id="op3" required>Other
+<br>
+
+<table id="table1" border="0" cellspacing="9px" cellpadding="0pt">
+<tr>
+<td>
+<label for="field1"><p id="p2">First name:</p> </label>
+</td>
+<td>
+<input placeholder="Your first name" type="text" id="field1" name="field1" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field2"><p id="p2">Last name:</p> </label>
+</td>
+<td>
+<input placeholder="Your last name" type="text" id="field2" name="field2" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field3"><p id="p2">DOB:</p> </label>
+</td>
+<td>
+<input placeholder="DD/MM/YYYY" type="text" id="field3" name="field3" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field4"><p id="p2">Email ID:</p> </label>
+</td>
+<td>
+<input placeholder="example123@gmail.com" type="text" id="field4" name="field4" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field5"><p id="p2">State and City:</p> </label>
+</td>
+<td>
+<input placeholder="abc scl/uni/clg, place" type="text" id="field5" name="field5" onkeyup="keyupFunc(this)" required>
+</td>
+</tr>
+
+</table>
+<br>
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+
+<p id="p2" style="display:inline">Are you a student?</p>
+<label for="op1"></label>&nbsp
+<input type="radio" name="option2" value="op1" id="op1" required>Yes
+<label for="op2"></label>&nbsp
+<input type="radio" name="option2" value="op2" id="op2" required>No
+
+&nbsp
+&nbsp
+
+<br>
+<br>
+
+</fieldset>
+
+<br>
+<br>
+<br>
+
+<fieldset id="Fset2">
+<legend id="leg2">Let's get into it</legend>
+<br>
+<br>
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+<p id="p2" style="display:inline"><b>I. </b>At what age you discovered gaming as a hobby?&nbsp: &nbsp </p>
+<label for="op1"></label>
+<input type="radio" name="option3" value="op2" id="op1" required> 5-10 yrs
+&nbsp
+&nbsp
+<label for="op2"></label>
+<input type="radio" name="option3" value="op1" id="op2" required> 10-15 yrs
+&nbsp
+&nbsp
+<label for="op3"></label>
+<input type="radio" name="option3" value="op3" id="op3" required > 15-20 yrs
+&nbsp
+&nbsp
+<label for="op4"></label>
+<input type="radio" name="option3" value="op4" id="op4" required> 20-30 yrs
+&nbsp
+&nbsp
+<label for="op5"></label>
+<input type="radio" name="option3" value="op5" id="op5" required> Above 30 yrs
+
+<br>
+<br>
+<br>
+
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+
+<p id="p2" style="display:inline"><b>  II. </b> Do you own a proper gaming setup?  </p></label>
+<label for="op1"></label>&nbsp &nbsp  
+<input type="radio" name="option4" value="op1" required>    Yes
+<label for="op1"></label>&nbsp &nbsp  
+<input type="radio" name="option4" value="op2" required>       No
+
+<br>
+<br>
+
+<table id="table2" border="0" cellspacing="20px" cellpadding="10pt">
+
+<tr>
+<td>
+<label for="dropdown1"><p id="p2" style="display:inline"><b>III. </b> Genre you like the most:</p> </label>
+</td>
+<td>
+<select id="dropdown1" required>
+<option name="op1" value="op1" required>Select</option>
+<option name="op2" value="op2" required>Story Mode</option>
+<option name="op3" value="op3" required>Fantasy</option>
+<option name="op4" value="op4" required>MOBA</option>
+<option name="op5" value="op5" required>Racing</option>
+<option name="op6" value="op6" required>Science Fiction</option>
+<option name="op7" value="op7" required>Military</option>
+<option name="op8" value="op8" required>Fighting</option>
+<option name="op9" value="op9" required>Other</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field6"><p id="p2" style="display:inline"><b>IV. </b> Why do you feel the need to play video games?</p></label>
+</td>
+<td>
+<input placeholder="to de-stress, competitive preparation etc" type="text" id="field6" name="field6" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field7"><p id="p2" style="display:inline"><b>V. </b> Have you ever been to an e-Sports tournament? If yes, describe your experience there in a few words</p> </label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field7" name="field7" required> 
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="field8"><p id="p2" style="display:inline"><b>VI. </b>Name your top 3 all time favourite games till now</p></label>
+</td>
+<td>
+<input placeholder="Your answer" type="text" id="field8" name="field8" required>
+</td>
+</tr>
+
+</table>
+
+<p id="p2">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>VII. </b> If you were given a chance to prepare and compete on the national/international stage would you?&nbsp</p></label>
+<label for="op1">
+&nbsp 
+&nbsp 
+&nbsp 
+&nbsp 
+&nbsp 
+&nbsp 
+&nbsp 
+<input type="radio" name="option5" value="op1" id="op1" required>Yes, I am waiting for this&nbsp &nbsp
+<label for="op2">
+<input type="radio" name="option5" value="op2" id="op2" required>Yes, I can try
+<label for="op3">&nbsp &nbsp
+<input type="radio" name="option5" value="op3" id="op3" required>No, I am not interested in competing
+
+<br>
+<br>
+<br>
+
+</fieldset>
+<br>
+<br>
+
+<!--<h4 style="display:inline">Select the following:</h4><br>
+<label class="checkb1" for="checkb1"></label>
+<input type="checkbox" id="checkb1" name="checkb1" value="Checkb1">Checkb1
+<span id="checkmark"></span>
+
+<label for="checkb2"></label>
+<input type="checkbox" id="checkb2" name="checkb1" value="Checkb2">Checkb2
+<br>
+<label for="checkb3"></label>
+<input type="checkbox" id="checkb3" name="checkb3" value="Checkb3">Checkb3
+
+<label for="checkb4"></label>
+<input type="checkbox" id="checkb4" name="checkb4" value="Checkb4">Checkb4-->
+
+<!-- add more if needed--> 
+<br>
+<br>
+<br>
+<center>
+<label for="desc1"><caption><font color="#f6f1d1">If we missed something you wanted to answer or share, let us know...</font> </caption></label><br>
+<textarea placeholder="Here..." id="desc1" rows="14" cols="130" style="resize:none">
+</textarea>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<label for="sub"></label>
+<input type="submit" name="submit" value="SUBMIT" id="sub">
+<label for="res"></label>&nbsp &nbsp
+<input type="reset" name="clearform" value="CLEAR" id="res">
+<div style="color:#f6f1d1; padding-top:10px;">The response will be submitted without any message once you fill 
+    all the fields correctly and click on submit or press Enter when on the last field!</div>
+</center>
+</form>
+<script>
+    function resetFunc() {
+        alert("All the inputs have been cleared!");
+    }
+    function subFunc() {
+        alert("The form has been submitted. Thank You!");
+    }
+    function keyupFunc() {
+        var x = document.getElementById("field1");
+        x.value = x.value.toUpperCase(); 
+
+        var x = document.getElementById("field2");
+        x.value = x.value.toUpperCase();
+        
+        var x = document.getElementById("field5");
+        x.value = x.value.toUpperCase(); 
+    }
+</script>
+</body>
+</html>

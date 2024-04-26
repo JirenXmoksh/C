@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Forms in HTML</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<form>
+<a href="FieldSets.html">Link</a>
+First name: <input type="text" name="first_name" value="Your First name" size="30" maxlength="30">
+<br>
+<br>
+Last name:  <input type="text" name="last_name" value="Your Last name" size="30" maxlength="30">
+<br>
+<br>
+
+User ID: <input type="text" name="user_id" value="Your First name" size="30" maxlength="30">
+<br>
+<br>
+Password:  <input type="password" name="password" value="Your Password" size="30" maxlength="30">
+<br>
+<br>
+
+Description: <br>
+<textarea rows="5" cols="60" name="Description">
+Enter description here...
+</textarea>
+
+<br>
+<br>
+
+<input type="checkbox" name="maths" value="on" checked>Maths
+<input type="checkbox" name="Physics" value="on">Physics
+
+<br>
+<br>
+
+<input type="radio" name="subject" value="maths">Maths
+<input type="radio" name="subject" value="physics" checked>Physics
+
+<br>
+<br>
+<!--Select box control-->
+Select subject: <br>
+<select name="dropdown" size="5" multiple>
+<option value="Maths">Maths</option>
+<option value="Physics">Physics</option>
+<option value="Chemistry">Chemistry</option>
+</select>
+
+<br>
+<br>
+
+Select file: <input type="file" name="fileupload" accept="image/*">
+<!--  '/*' for all types of images-->
+
+<br>
+<br>
+<!--Button control-->
+
+<input type="submit" name="submit" value="Submit">
+<input type="reset" name="reset" value="Reset">
+<input type="button" name="ok" value="OK">
+<br>
+<input type="image" name="imagebutton" src="image.jpg" width="100" height="100">
+
+<br>
+<br>
+<!-- Hidden form controls-->
+<p>This is page 10</p>
+<input type="hidden" name="pagenumber" value="10">
+<input type="submit" name="submit" value="Submit">
+<input type="reset" name="reset" value="Reset">
+
+<br>
+<br>
+
+</form>
+
+<audio width="320" height="240" controls>
+<source src="sampleAUD.mp3" type="audio/mpeg">
+</audio>
+
+<video width="320" height="240" controls>
+<source src="video.mp4" type="video/mp4">
+</video>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+       The setDate() method can be used to add days to a date.
+    </title>
+</head>
+<body>
+    <p>The setDate() method can be used to add days to a date.</p>
+    <p id="a"></p>
+<script>
+    var d = new Date();
+    d.setDate(d.getDate() + 50);
+    document.getElementById("a").innerHTML = d;
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+nav {
+z-index: 10;
+width: 45%;
+height: 50px;
+font-size: 15px;
+position: relative;
+top: 60px;
+left:370px;
+display: inline;
+}
+#navdropdown {
+z-index: 1;
+border-radius: 30px;
+font-family: markpro;
+font-size: 15px;
+background-color: rgba(10,10,10,0.2);
+color:#F6F1D1;
+transition: 0.3s;
+text-align: center;
+}
+#navdropdown:hover {
+	transform: scale(0.996);
+	font-weight: bold;
+	background-color: #F6F1D1;
+	color: #1e1b18;
+}
+#services {
+	color: #F6F1D1;
+	text-decoration: none;
+	border: 2px solid #F6F1D1;
+	height: 48px;
+	background-color:rgba(0,0,0,0.3);
+	transition: 0.4s;
+	font-size: 15px;
+	border-radius: 30px;
+}
+#services:hover {
+	transform: scale(0.99);
+	color: #1e1b18;
+	background-color: #F6F1D1;
+	font-weight: bold;
+	box-shadow: 0px 0px 0px 2px #1e1b18;
+}
+
+#navbarE2 {
+	font-family: markpro;
+	height: 48px;
+	color:#F6F1D1;
+	border: 2px solid #F6F1D1;
+	border-radius: 30px;
+	text-decoration: none;
+	font-size: 15px;
+	transition: 0.4s;
+	background-color:rgba(0,0,0,0.3);	
+}
+#navbarE2:hover {
+	transform: scale(0.996);
+	font-weight: bold;
+	color: #1e1b18;
+	background-color: #F6F1D1;
+	box-shadow: 0px 0px 0px 2px #1e1b18;
+	}
+#navbarE3 {
+	font-family: markpro;
+
+	height: 48px;
+	color:#F6F1D1;
+	border: 2px solid #F6F1D1;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.4s;
+	font-size: 15px;
+	background-color:rgba(0,0,0,0.3);	
+}
+#navbarE3:hover {
+	transform: scale(0.996);
+	font-weight: bold;
+	color: #1e1b18;
+	background-color: #F6F1D1;
+	box-shadow: 0px 0px 0px 2px #1e1b18;
+	}
+#navbarE32 {
+	font-family: markpro;
+	height: 48px;
+	color:#1e1b18;
+	border: 2px solid #1e1b18;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.4s;
+	font-size: 15px;
+	background-color:rgba(0,0,0,0.3);	
+}
+#navbarE32:hover {
+	transform: scale(0.996);
+	font-weight: bold;
+	color: #1e1b18;
+	background-color: #F6F1D1;
+	box-shadow: 0px 0px 0px 2px #1e1b18;
+	}
+#navbarE4 {
+	font-family: markpro;
+	color:#F6F1D1;
+	height: 48px;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.4s;
+	font-size: 15px;
+	background-color:rgba(0,0,0,0.3);
+}
+#navbarE4:hover {
+	transform: scale(0.998);
+	font-weight: bold;
+	color: #1e1b18;
+	background-color: #F6F1D1;
+	box-shadow: 0px 0px 0px 2px #1e1b18;
+}
+#navbarE42 {
+	font-family: markpro;
+	color:#1e1b18;
+	height: 48px;
+	border: 2px solid #1e1b18;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.4s;
+	font-size: 15px;
+	background-color:rgba(0,0,0,0.3);
+}
+#navbarE42:hover {
+	transform: scale(0.998);
+	font-weight: bold;
+	color: #1e1b18;
+	background-color: #F6F1D1;
+	box-shadow: 0px 0px 0px 2px #1e1b18;
+}

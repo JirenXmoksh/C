@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.wrap {
+margin-top: 200px;
+perspective: 1000px;
+perspective-origin: 50px 50px;
+}
+
+.cube {
+margin: auto;
+position: relative;
+height: 200px;
+width: 200px;
+transform-style: preserve-3d;
+animation: rotate 10s infinite alternate linear;
+}
+
+.cube div {
+position: absolute;
+box-sizing: border-box;
+padding: 10px;
+height: 100%;
+width: 100%;
+opacity: 0.9;
+border: solid 1px #eeeeee;
+color: #ffffff;
+}
+
+.front {
+transform: translateZ(100px);
+text-align: center;
+text-align: end;
+font-size: larger;
+background-color: #f8cc0f;
+}
+
+.back {
+transform: translateZ(-100px);
+rotateY(180deg);
+background-color: #4db849;
+}
+
+.top {
+transform: rotateX(-270deg)
+translateY(-100px);
+transform-origin: top center;
+background-color: #000;
+}
+
+.bottom{
+transform: rotateX(270deg) translateY(100px);
+transform-origin: bottom center;
+background-color: #53bdeb;
+}
+
+.left {
+transform: rotateY(270deg)
+translateX(-100px);
+transform-origin: center left;
+background-color: #ffa6a6
+}
+
+.right {
+transform: rotateY(-270deg) translateX(100px);
+transform-origin: top right;
+background-color: #e8483f;
+}
+
+@keyframes rotate {
+from {transform: rotateX(0deg) rotateY(0deg);}
+to {transform: rotateX(360deg) rotateY(360deg);}
+}
+
+</style>
+</head>
+<body>
+<div style="text-align:center;">
+<p>Animation of 3D rotating cube</p></div>
+
+<div class="wrap">
+<div class="cube">
+
+<div class="front">
+Front side of cube
+</div>
+
+<div class="back">
+Back side of cube
+</div>
+
+<div class="top">
+Top side of cube
+</div>
+
+<div class="bottom">
+Bottom side of cube
+</div>
+
+<div class="left">
+Left side of cube
+</div>
+
+<div class="right">
+Right side of cube
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
