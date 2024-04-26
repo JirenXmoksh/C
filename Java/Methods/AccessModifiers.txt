@@ -1,6 +1,0 @@
-         Within Class       Outside Class       Outside Package, non-child       Outside Package, child
-
-Public       Yes                 Yes                     Yes                                 Yes
-Protected    Yes                 Yes                      No                                 Yes
-Default      Yes                 Yes                      No                                  No
-Private      Yes                  No                      No                                  No
