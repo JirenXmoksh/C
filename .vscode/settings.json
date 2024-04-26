@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "stdio.h": "c",
-        "string.h": "c",
-        "stdbool.h": "c",
-        "Wordle.C": "cpp"
-    },
-    "github.copilot.editor.enableAutoCompletions": false
-}
